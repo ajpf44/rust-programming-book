@@ -5,7 +5,7 @@ use std::io::Write;
 fn main() {
     println!("starting the guess game\nguess a number in a range 0-100");
     let mut rng  = rand::thread_rng();
-    let guess_num:u8 = rng.gen_range(0..100);
+    let guess_num:u32 = rng.gen_range(0..100);
     let mut tries: u8 = 1;
 
     while tries < 8 {
@@ -17,7 +17,7 @@ fn main() {
             .read_line(&mut input)
             .expect("Falied to read the line");
 
-        let player_num = input
+        let player_num:u32 = input
             .trim()
             .parse()
             .expect("Not a number");
