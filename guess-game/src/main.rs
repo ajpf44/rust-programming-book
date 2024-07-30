@@ -10,7 +10,7 @@ fn main() {
 
     while tries < 8 {
         print!("type your guess: ");
-        io::stdout().flush().expect("Invalid flush");
+        io::stdout().flush().expect("Invalid flush"); // to refresh the outer
 
         let mut input = String::new();
         io::stdin()
